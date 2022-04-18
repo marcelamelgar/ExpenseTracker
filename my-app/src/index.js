@@ -265,7 +265,7 @@ function Apps() {
     <Container>
       <TitleText />
       <ExpenseTracker />
-      <SearchBar />
+      <FilterableProductTable products=ExpensesTable() />
     </Container>
   );
 }
