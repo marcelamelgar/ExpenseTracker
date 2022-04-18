@@ -4,8 +4,10 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
 import { Row, Col, Form, Table, Button, Container, ButtonToolbar } from 'react-bootstrap';
 
+var element = React.createElement('h1', { className: 'greeting' }, 'Hello, world!');
 ReactDOM.render(element, document.getElementById('root'));
 
 function TitleText(){
