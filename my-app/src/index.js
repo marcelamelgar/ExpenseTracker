@@ -7,9 +7,6 @@ import reportWebVitals from './reportWebVitals';
 
 import { Row, Col, Form, Table, Button, Container, ButtonToolbar } from 'react-bootstrap';
 
-var element = React.createElement('h1', { className: 'greeting' }, 'Hello, world!');
-ReactDOM.render(element, document.getElementById('root'));
-
 function TitleText(){
   return (
     <Container>
@@ -210,6 +207,9 @@ function Apps() {
     </Container>
   );
 }
+
+var element = TitleText();
+ReactDOM.render(element, document.getElementById('root'));
 
 ReactDOM.render(
   <Apps />,
