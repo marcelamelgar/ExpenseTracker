@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Container} from 'react-bootstrap';
-import TitleText from "./Components/TitleText";
-import ExpenseTracker from "./Components/ExpenseTracker";
+import TitleText from "./Component/TitleText";
+import ExpenseTracker from "./Component/ExpenseTracker";
 
 function App() {
   return (
