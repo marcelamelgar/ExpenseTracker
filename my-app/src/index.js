@@ -201,71 +201,12 @@ function ExpenseTracker() {
 
 const { useState } = React
 
-function SearchBar({filterText, 
-                   onFilterTextChange}){
-  return (
-    <form>
-      <input type='text' 
-              value={filterText} 
-              placeholder='Search...'
-              onChange={(e) => onFilterTextChange(e.target.value)}
-              />
-    </form>
-  );
-}
-
-function ProductCategoryRow({ name }) {
-  return (
-    <tr>
-      <th colspan="2">
-        {name}
-      </th>
-    </tr>
-  );
-}
-
-function ProductTable({ products, filterText}) {
-  const rows = [];
-  let lastCategory = null;
-
-  products.forEach((product) => {
-    if (product.name.toLowerCase().indexOf(filterText.toLowerCase())
-        === -1) {
-      return;
-    }
-    
-    if (product.category !== lastCategory) {
-      rows.push(
-        <ProductCategoryRow category={product.category} key={product.category} />
-      );
-    }
-    
-    lastCategory = product.category;
-  });
-
-  return(
-    <ExpensesTable />
-    );
-  }
-
-  function FilterableProductTable({ products }) {
-    const [filterText, setFilterText] = useState('');
-    return (
-      <div>
-        <SearchBar filterText={filterText}
-                   onFilterTextChange={setFilterText}/>
-        <ProductTable products={products} 
-                    filterText={filterText}/>
-      </div>
-    );
-  }
 
 function Apps() {
   return (
     <Container>
       <TitleText />
       <ExpenseTracker />
-      <FilterableProductTable products=ExpensesTable() />
     </Container>
   );
 }
