@@ -9,16 +9,6 @@ import { Row, Col, Form, Table, Button, Container, ButtonToolbar } from 'react-b
 
 
 
-
-function Apps() {
-  return (
-    <Container>
-      <TitleText />
-      <ExpenseTracker />
-    </Container>
-  );
-}
-
 var element = TitleText();
 ReactDOM.render(element, document.getElementById('root'));
 
