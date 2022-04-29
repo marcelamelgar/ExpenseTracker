@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Table, Button, ButtonToolbar } from 'react-bootstrap';
+import { faPencil, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class ExpenseForm extends Component {
   constructor() {
@@ -34,14 +36,14 @@ class ExpenseForm extends Component {
                     variant="outline-light"
                     onClick={(e) => this.props.handleEdit(index)}
                   >
-                    E
+                    <FontAwesomeIcon icon={faPencil} />
                   </Button>{' '}
                   |{' '}
                   <Button
                     variant="outline-light"
                     onClick={(e) => this.props.handleDelete(index)}
                   >
-                    X
+                    <FontAwesomeIcon icon={faTrash} />
                   </Button>
                 </ButtonToolbar>
               </td>
